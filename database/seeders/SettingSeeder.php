@@ -123,7 +123,7 @@ class SettingSeeder extends Seeder
             ],
             [
                 'title'      => 'stripe_key',
-                'value'      => '"pk_test_2ttZXh7jmC7V9JKQENaq7SVH"',
+                'value'      => '""',
                 'status'     => 1,
                 'lang'       => 'en',
                 'created_at' => $now,
