@@ -131,7 +131,7 @@ class SettingSeeder extends Seeder
             ],
             [
                 'title'      => 'stripe_secret',
-                'value'      => '"sk_test_2qDzEY6o64liVUfurzLosjbM"',
+                'value'      => '""',
                 'status'     => 1,
                 'lang'       => 'en',
                 'created_at' => $now,
@@ -155,7 +155,7 @@ class SettingSeeder extends Seeder
             ],
             [
                 'title'      => 'paypal_client_id',
-                'value'      => '"ARVXzUnLw-7OmHzIVqqUe_otKVpgoYhv1lFv1SG3OZpUF6cUhDmS-DPawzUsSImQm8ezKo7W0cX0yCjc"',
+                'value'      => '""',
                 'status'     => 1,
                 'lang'       => 'en',
                 'created_at' => $now,
@@ -163,7 +163,7 @@ class SettingSeeder extends Seeder
             ],
             [
                 'title'      => 'paypal_client_secret',
-                'value'      => '"EA8fXJIkp6xHHG9iJmDbiKkuGvaicoDSqI4TIvwRmGy8zdRcKx--3vV3SGNWfySBI_W3a_kNnhCnddRQ"',
+                'value'      => '""',
                 'status'     => 1,
                 'lang'       => 'en',
                 'created_at' => $now,
@@ -187,7 +187,7 @@ class SettingSeeder extends Seeder
             ],
             [
                 'title'      => 'paddle_api_key',
-                'value'      => '"3dacf9f5b8f8285caab1a7e0a181fec1756af9db9de6c6625a "',
+                'value'      => '""',
                 'status'     => 1,
                 'lang'       => 'en',
                 'created_at' => $now,
@@ -195,7 +195,7 @@ class SettingSeeder extends Seeder
             ],
             [
                 'title'      => 'paddle_client_token',
-                'value'      => '"test_ee6ed044679e6efb75700af5ad5"',
+                'value'      => '""',
                 'status'     => 1,
                 'lang'       => 'en',
                 'created_at' => $now,
@@ -235,7 +235,7 @@ class SettingSeeder extends Seeder
             ],
             [
                 'title'      => 'razorpay_key',
-                'value'      => '"rzp_test_0TxiJynxZFTbwx"',
+                'value'      => '""',
                 'status'     => 1,
                 'lang'       => 'en',
                 'created_at' => $now,
@@ -243,7 +243,7 @@ class SettingSeeder extends Seeder
             ],
             [
                 'title'      => 'razorpay_secret',
-                'value'      => '"3WTWGfrzVjwTcVMgzy8phSpJ"',
+                'value'      => '""',
                 'status'     => 1,
                 'lang'       => 'en',
                 'created_at' => $now,
