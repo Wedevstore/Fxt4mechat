@@ -1,0 +1,57 @@
+/*********************************
+/* Breadcrumb Section Start
+*********************************/
+.breadcrumb__area {
+    padding: 172px 0 200px;
+    background: url('../images/banner/banner-mask.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: relative;
+    z-index: 9;
+
+    @include respond (tabland) {
+        padding: 120px 0 170px;
+    }
+    @include respond (phone) {
+        padding: 120px 0 120px;
+    }
+    .breadcrumb__title {
+        .title {
+            font-family: $default;
+            font-size: 60px;
+            line-height: 72px;
+            letter-spacing: -0.25px;
+            font-weight: $bold;
+            color: $heading;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+            background: linear-gradient(180deg, rgba(245,245,245,1) 10%, rgba(245,245,245,0.9) 57%, rgba(115,115,115, 0) 100%);
+            -webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+            @include respond(tabland) {
+                font-size: 48px;
+                line-height: 50px;
+            }
+            @include respond(phone) {
+                font-size: 36px;
+                line-height: 45px;
+                margin-bottom: 10px;
+            }
+        }
+        p,
+        .desc {
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            margin-bottom: 0;
+
+            @include respond(phone-sm) {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+/*********************************
+/* Breadcrumb Section End
+*********************************/

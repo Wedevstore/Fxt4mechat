@@ -1,0 +1,647 @@
+[2026-02-24 19:34:08] local.ERROR: SQLSTATE[HY000] [14] unable to open database file (SQL: PRAGMA foreign_keys = ON;) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 14): SQLSTATE[HY000] [14] unable to open database file (SQL: PRAGMA foreign_keys = ON;) at /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:760)
+[stacktrace]
+#0 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(720): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#1 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(534): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#2 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(397): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#3 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(35): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#4 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(272): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '', '', Array)
+#5 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(75): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '', '', Array)
+#6 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#7 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(152): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#8 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(101): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#9 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(211): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#10 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(167): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getConnection()
+#11 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(722): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#12 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(138): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#13 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Support/helpers.php(260): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->{closure:Illuminate\\Database\\Console\\Migrations\\MigrateCommand::repositoryExists():138}(1)
+#14 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(138): retry(1, Object(Closure), 0, Object(Closure))
+#15 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(114): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->repositoryExists()
+#16 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(82): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(636): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->{closure:Illuminate\\Database\\Console\\Migrations\\MigrateCommand::handle():81}()
+#18 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(81): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#19 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#20 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#21 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#22 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#23 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(661): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#24 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#25 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(152): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#27 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(1083): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(155): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 {main}
+
+[previous exception] [object] (PDOException(code: 14): SQLSTATE[HY000] [14] unable to open database file at /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('sqlite:/Users/u...', NULL, Object(SensitiveParameterValue), Array)
+#1 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(45): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('sqlite:/Users/u...', NULL, NULL, Array)
+#2 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(37): Illuminate\\Database\\Connectors\\Connector->createConnection('sqlite:/Users/u...', Array, Array)
+#3 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(221): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->{closure:Illuminate\\Database\\Connectors\\ConnectionFactory::createPdoResolverWithoutHosts():221}()
+#5 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1181): call_user_func(Object(Closure))
+#6 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(539): Illuminate\\Database\\Connection->getPdo()
+#7 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(753): Illuminate\\Database\\Connection->{closure:Illuminate\\Database\\Connection::statement():534}('PRAGMA foreign_...', Array)
+#8 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(720): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#9 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(534): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#10 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(397): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#11 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(35): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#12 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(272): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '', '', Array)
+#13 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(75): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '', '', Array)
+#14 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#15 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(152): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#16 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(101): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#17 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(211): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#18 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(167): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getConnection()
+#19 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(722): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#20 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(138): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#21 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Support/helpers.php(260): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->{closure:Illuminate\\Database\\Console\\Migrations\\MigrateCommand::repositoryExists():138}(1)
+#22 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(138): retry(1, Object(Closure), 0, Object(Closure))
+#23 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(114): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->repositoryExists()
+#24 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(82): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#25 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(636): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->{closure:Illuminate\\Database\\Console\\Migrations\\MigrateCommand::handle():81}()
+#26 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(81): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#27 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#28 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#29 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#30 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#31 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(661): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#32 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#33 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#34 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(152): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#35 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(1083): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#38 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#39 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(155): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#40 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#41 {main}
+"} 
+[2026-02-24 19:35:04] local.ERROR: SQLSTATE[HY000] [14] unable to open database file (SQL: PRAGMA foreign_keys = ON;) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 14): SQLSTATE[HY000] [14] unable to open database file (SQL: PRAGMA foreign_keys = ON;) at /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:760)
+[stacktrace]
+#0 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(720): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#1 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(534): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#2 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(397): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#3 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(35): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#4 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(272): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '', '', Array)
+#5 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(75): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '', '', Array)
+#6 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#7 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(152): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#8 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(101): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#9 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(211): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#10 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(167): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getConnection()
+#11 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(722): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#12 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(138): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#13 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Support/helpers.php(260): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->{closure:Illuminate\\Database\\Console\\Migrations\\MigrateCommand::repositoryExists():138}(1)
+#14 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(138): retry(1, Object(Closure), 0, Object(Closure))
+#15 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(114): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->repositoryExists()
+#16 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(82): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(636): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->{closure:Illuminate\\Database\\Console\\Migrations\\MigrateCommand::handle():81}()
+#18 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(81): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#19 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#20 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#21 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#22 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#23 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(661): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#24 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#25 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(152): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#27 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(1083): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(155): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 {main}
+
+[previous exception] [object] (PDOException(code: 14): SQLSTATE[HY000] [14] unable to open database file at /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('sqlite:/Users/u...', NULL, Object(SensitiveParameterValue), Array)
+#1 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(45): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('sqlite:/Users/u...', NULL, NULL, Array)
+#2 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(37): Illuminate\\Database\\Connectors\\Connector->createConnection('sqlite:/Users/u...', Array, Array)
+#3 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(221): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->{closure:Illuminate\\Database\\Connectors\\ConnectionFactory::createPdoResolverWithoutHosts():221}()
+#5 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1181): call_user_func(Object(Closure))
+#6 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(539): Illuminate\\Database\\Connection->getPdo()
+#7 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(753): Illuminate\\Database\\Connection->{closure:Illuminate\\Database\\Connection::statement():534}('PRAGMA foreign_...', Array)
+#8 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(720): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#9 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(534): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#10 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(397): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#11 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(35): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#12 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(272): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '', '', Array)
+#13 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(75): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '', '', Array)
+#14 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#15 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(152): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#16 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(101): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#17 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(211): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#18 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(167): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getConnection()
+#19 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(722): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#20 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(138): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#21 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Support/helpers.php(260): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->{closure:Illuminate\\Database\\Console\\Migrations\\MigrateCommand::repositoryExists():138}(1)
+#22 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(138): retry(1, Object(Closure), 0, Object(Closure))
+#23 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(114): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->repositoryExists()
+#24 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(82): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#25 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(636): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->{closure:Illuminate\\Database\\Console\\Migrations\\MigrateCommand::handle():81}()
+#26 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(81): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#27 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#28 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#29 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#30 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#31 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(661): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#32 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#33 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#34 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(152): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#35 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(1083): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#38 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#39 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(155): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#40 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#41 {main}
+"} 
+[2026-02-24 19:35:31] local.ERROR: SQLSTATE[HY000] [14] unable to open database file (SQL: PRAGMA foreign_keys = ON;) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 14): SQLSTATE[HY000] [14] unable to open database file (SQL: PRAGMA foreign_keys = ON;) at /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:760)
+[stacktrace]
+#0 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(720): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#1 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(534): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#2 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(397): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#3 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(35): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#4 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(272): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '', '', Array)
+#5 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(75): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '', '', Array)
+#6 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#7 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(152): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#8 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(101): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#9 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(211): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#10 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(167): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getConnection()
+#11 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(722): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#12 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(138): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#13 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Support/helpers.php(260): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->{closure:Illuminate\\Database\\Console\\Migrations\\MigrateCommand::repositoryExists():138}(1)
+#14 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(138): retry(1, Object(Closure), 0, Object(Closure))
+#15 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(114): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->repositoryExists()
+#16 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(82): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(636): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->{closure:Illuminate\\Database\\Console\\Migrations\\MigrateCommand::handle():81}()
+#18 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(81): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#19 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#20 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#21 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#22 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#23 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(661): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#24 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#25 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(152): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#27 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(1083): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(155): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 {main}
+
+[previous exception] [object] (PDOException(code: 14): SQLSTATE[HY000] [14] unable to open database file at /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('sqlite:/Users/u...', NULL, Object(SensitiveParameterValue), Array)
+#1 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(45): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('sqlite:/Users/u...', NULL, NULL, Array)
+#2 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(37): Illuminate\\Database\\Connectors\\Connector->createConnection('sqlite:/Users/u...', Array, Array)
+#3 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(221): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->{closure:Illuminate\\Database\\Connectors\\ConnectionFactory::createPdoResolverWithoutHosts():221}()
+#5 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1181): call_user_func(Object(Closure))
+#6 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(539): Illuminate\\Database\\Connection->getPdo()
+#7 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(753): Illuminate\\Database\\Connection->{closure:Illuminate\\Database\\Connection::statement():534}('PRAGMA foreign_...', Array)
+#8 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(720): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#9 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(534): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#10 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(397): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#11 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(35): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#12 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(272): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '', '', Array)
+#13 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(75): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '', '', Array)
+#14 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#15 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(152): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#16 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(101): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#17 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(211): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#18 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(167): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getConnection()
+#19 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(722): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#20 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(138): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#21 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Support/helpers.php(260): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->{closure:Illuminate\\Database\\Console\\Migrations\\MigrateCommand::repositoryExists():138}(1)
+#22 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(138): retry(1, Object(Closure), 0, Object(Closure))
+#23 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(114): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->repositoryExists()
+#24 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(82): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#25 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(636): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->{closure:Illuminate\\Database\\Console\\Migrations\\MigrateCommand::handle():81}()
+#26 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(81): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#27 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#28 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#29 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#30 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#31 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(661): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#32 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#33 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#34 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(152): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#35 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(1083): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/symfony/console/Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#38 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#39 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(155): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#40 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#41 {main}
+"} 
+[2026-02-24 19:40:58] local.ERROR: SQLSTATE[HY000]: General error: 1 no such table: pages (SQL: select * from "pages" where "pages"."id" = 404 limit 1) {"view":{"view":"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/resources/views/errors/404.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1918461637 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#2528</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1918461637\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","exception":"<pre class=sf-dump id=sf-dump-1662141622 data-indent-pad=\"  \"><span class=sf-dump-note>Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException</span> {<a class=sf-dump-ref>#1806</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">message</span>: \"<span class=sf-dump-str title=\"41 characters\">The route favicon.ico could not be found.</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">code</span>: <span class=sf-dump-num>0</span>
+  #<span class=sf-dump-protected title=\"Protected property\">file</span>: \"<span class=\"sf-dump-str sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php
+129 characters\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Routing/AbstractRouteCollection.php</span></span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">line</span>: <span class=sf-dump-num>44</span>
+  -<span class=sf-dump-private title=\"Private property defined in class:&#10;`Symfony\\Component\\HttpKernel\\Exception\\HttpException`\">statusCode</span>: <span class=sf-dump-num>404</span>
+  -<span class=sf-dump-private title=\"Private property defined in class:&#10;`Symfony\\Component\\HttpKernel\\Exception\\HttpException`\">headers</span>: []
+  <span class=sf-dump-meta>trace</span>: {<samp data-depth=2 class=sf-dump-compact>
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php:44
+Stack level 26.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Routing/AbstractRouteCollection.php:44</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Routing\\AbstractRouteCollection-&gt;handleMatchedRoute(Request $request, $route)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Routing</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">AbstractRouteCollection-&gt;handleMatchedRoute(Request $request, $route)</span></span> &#8230;
+      &#8250; 
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Routing\\AbstractRouteCollection-&gt;handleMatchedRoute(Request $request, $route)\">throw new NotFoundHttpException(sprintf(</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>    &#039;The route %s could not be found.&#039;,</span></code>
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php:162
+Stack level 25.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Routing/RouteCollection.php:162</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Routing\\RouteCollection-&gt;match(Request $request)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Routing</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">RouteCollection-&gt;match(Request $request)</span></span> &#8230;
+      &#8250; 
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Routing\\RouteCollection-&gt;match(Request $request)\">    return $this-&gt;handleMatchedRoute($request, $route);</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>}</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;2}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:753
+Stack level 24.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Routing/Router.php:753</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Routing\\Router-&gt;findRoute($request)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Routing</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">Router-&gt;findRoute($request)</span></span> &#8230;
+      &#8250; 
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Routing\\Router-&gt;findRoute($request)\">$this-&gt;current = $route = $this-&gt;routes-&gt;match($request);</span></code>
+      &#8250; 
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:740
+Stack level 23.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Routing/Router.php:740</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Routing\\Router-&gt;dispatchToRoute(Request $request)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Routing</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">Router-&gt;dispatchToRoute(Request $request)</span></span> &#8230;
+      &#8250; <code class=\"php\"><span class=sf-dump-default>{</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Routing\\Router-&gt;dispatchToRoute(Request $request)\">    return $this-&gt;runRoute($request, $this-&gt;findRoute($request));</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>}</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:729
+Stack level 22.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Routing/Router.php:729</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Routing\\Router-&gt;dispatch(Request $request)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Routing</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">Router-&gt;dispatch(Request $request)</span></span> &#8230;
+      &#8250; 
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Routing\\Router-&gt;dispatch(Request $request)\">    return $this-&gt;dispatchToRoute($request);</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>}</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:190
+Stack level 21.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Foundation/Http/Kernel.php:190</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Foundation\\Http\\Kernel-&gt;{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():187}
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Foundation\\Http\\Kernel-&gt;{closure:Illuminate\\Foundation\\Http</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">Kernel::dispatchToRouter():187}</span></span> &#8230;
+      &#8250; 
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Foundation\\Http\\Kernel-&gt;{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():187}\">    return $this-&gt;router-&gt;dispatch($request);</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>};</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+Stack level 20.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Pipeline/Pipeline.php:141</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Pipeline\\Pipeline-&gt;{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():139}
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Pipeline\\Pipeline-&gt;{closure:Illuminate\\Pipeline</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">Pipeline::prepareDestination():139}</span></span> &#8230;
+      &#8250; <code class=\"php\"><span class=sf-dump-default>try {</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Pipeline\\Pipeline-&gt;{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():139}\">    return $destination($passable);</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>} catch (Throwable $e) {</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php:21
+Stack level 19.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php:21</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest-&gt;handle($request, Closure $next)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Foundation\\Http\\Middleware</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">TransformsRequest-&gt;handle($request, Closure $next)</span></span> &#8230;
+      &#8250; 
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest-&gt;handle($request, Closure $next)\">    return $next($request);</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>}</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php:31
+Stack level 18.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php:31</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull-&gt;handle($request, Closure $next)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Foundation\\Http\\Middleware</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">ConvertEmptyStringsToNull-&gt;handle($request, Closure $next)</span></span> &#8230;
+      &#8250; 
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull-&gt;handle($request, Closure $next)\">    return parent::handle($request, $next);</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>}</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;2}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+Stack level 17.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Pipeline/Pipeline.php:180</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">Pipeline::carry():155}:156}</span></span> &#8230;
+      &#8250; <code class=\"php\"><span class=sf-dump-default>$carry = method_exists($pipe, $this-&gt;method)</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}\">                ? $pipe-&gt;{$this-&gt;method}(...$parameters)</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>                : $pipe(...$parameters);</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;2}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php:21
+Stack level 16.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php:21</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest-&gt;handle($request, Closure $next)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Foundation\\Http\\Middleware</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">TransformsRequest-&gt;handle($request, Closure $next)</span></span> &#8230;
+      &#8250; 
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest-&gt;handle($request, Closure $next)\">    return $next($request);</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>}</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php:40
+Stack level 15.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Foundation/Http/Middleware/TrimStrings.php:40</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Foundation\\Http\\Middleware\\TrimStrings-&gt;handle($request, Closure $next)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Foundation\\Http\\Middleware</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">TrimStrings-&gt;handle($request, Closure $next)</span></span> &#8230;
+      &#8250; 
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Foundation\\Http\\Middleware\\TrimStrings-&gt;handle($request, Closure $next)\">    return parent::handle($request, $next);</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>}</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;2}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+Stack level 14.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Pipeline/Pipeline.php:180</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">Pipeline::carry():155}:156}</span></span> &#8230;
+      &#8250; <code class=\"php\"><span class=sf-dump-default>$carry = method_exists($pipe, $this-&gt;method)</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}\">                ? $pipe-&gt;{$this-&gt;method}(...$parameters)</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>                : $pipe(...$parameters);</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;2}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php:27
+Stack level 13.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php:27</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize-&gt;handle($request, Closure $next)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Foundation\\Http\\Middleware</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">ValidatePostSize-&gt;handle($request, Closure $next)</span></span> &#8230;
+      &#8250; 
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize-&gt;handle($request, Closure $next)\">    return $next($request);</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>}</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+Stack level 12.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Pipeline/Pipeline.php:180</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">Pipeline::carry():155}:156}</span></span> &#8230;
+      &#8250; <code class=\"php\"><span class=sf-dump-default>$carry = method_exists($pipe, $this-&gt;method)</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}\">                ? $pipe-&gt;{$this-&gt;method}(...$parameters)</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>                : $pipe(...$parameters);</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;2}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php:86
+Stack level 11.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php:86</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance-&gt;handle($request, Closure $next)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Foundation\\Http\\Middleware</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">PreventRequestsDuringMaintenance-&gt;handle($request, Closure $next)</span></span> &#8230;
+      &#8250; 
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance-&gt;handle($request, Closure $next)\">    return $next($request);</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>}</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+Stack level 10.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Pipeline/Pipeline.php:180</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">Pipeline::carry():155}:156}</span></span> &#8230;
+      &#8250; <code class=\"php\"><span class=sf-dump-default>$carry = method_exists($pipe, $this-&gt;method)</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}\">                ? $pipe-&gt;{$this-&gt;method}(...$parameters)</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>                : $pipe(...$parameters);</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;2}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php:49
+Stack level 9.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Http/Middleware/HandleCors.php:49</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Http\\Middleware\\HandleCors-&gt;handle($request, Closure $next)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Http\\Middleware</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">HandleCors-&gt;handle($request, Closure $next)</span></span> &#8230;
+      &#8250; <code class=\"php\"><span class=sf-dump-default>if (! $this-&gt;hasMatchingPath($request)) {</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Http\\Middleware\\HandleCors-&gt;handle($request, Closure $next)\">    return $next($request);</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>}</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+Stack level 8.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Pipeline/Pipeline.php:180</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">Pipeline::carry():155}:156}</span></span> &#8230;
+      &#8250; <code class=\"php\"><span class=sf-dump-default>$carry = method_exists($pipe, $this-&gt;method)</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}\">                ? $pipe-&gt;{$this-&gt;method}(...$parameters)</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>                : $pipe(...$parameters);</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;2}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php:39
+Stack level 7.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Http/Middleware/TrustProxies.php:39</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Http\\Middleware\\TrustProxies-&gt;handle(Request $request, Closure $next)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Http\\Middleware</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">TrustProxies-&gt;handle(Request $request, Closure $next)</span></span> &#8230;
+      &#8250; 
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Http\\Middleware\\TrustProxies-&gt;handle(Request $request, Closure $next)\">    return $next($request);</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>}</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+Stack level 6.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Pipeline/Pipeline.php:180</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">Pipeline::carry():155}:156}</span></span> &#8230;
+      &#8250; <code class=\"php\"><span class=sf-dump-default>$carry = method_exists($pipe, $this-&gt;method)</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Pipeline\\Pipeline-&gt;{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}\">                ? $pipe-&gt;{$this-&gt;method}(...$parameters)</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>                : $pipe(...$parameters);</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;2}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:116
+Stack level 5.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Pipeline/Pipeline.php:116</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Pipeline\\Pipeline-&gt;then(Closure $destination)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Pipeline</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">Pipeline-&gt;then(Closure $destination)</span></span> &#8230;
+      &#8250; 
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Pipeline\\Pipeline-&gt;then(Closure $destination)\">    return $pipeline($this-&gt;passable);</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>}</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:165
+Stack level 4.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Foundation/Http/Kernel.php:165</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Foundation\\Http\\Kernel-&gt;sendRequestThroughRouter($request)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Foundation\\Http</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">Kernel-&gt;sendRequestThroughRouter($request)</span></span> &#8230;
+      &#8250; <code class=\"php\"><span class=sf-dump-default>                -&gt;through($this-&gt;app-&gt;shouldSkipMiddleware() ? [] : $this-&gt;middleware)</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Foundation\\Http\\Kernel-&gt;sendRequestThroughRouter($request)\">                -&gt;then($this-&gt;dispatchToRouter());</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>}</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:134
+Stack level 3.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span><span class=\"sf-dump-ellipsis-tail\">src/Illuminate/Foundation/Http/Kernel.php:134</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Foundation\\Http\\Kernel-&gt;handle($request)
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Foundation\\Http</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">Kernel-&gt;handle($request)</span></span> &#8230;
+      &#8250; 
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in Illuminate\\Foundation\\Http\\Kernel-&gt;handle($request)\">    $response = $this-&gt;sendRequestThroughRouter($request);</span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>} catch (Throwable $e) {</span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/index.php:60
+Stack level 2.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/</span><span class=\"sf-dump-ellipsis-tail\">index.php:60</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-note>require_once</span> &#8230;
+      &#8250; <code class=\"php\"><span class=sf-dump-default><span class=\"sf-dump-default sf-dump-ns\">\\r</span></span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-const title=\"in require_once\">$response = tap($kernel-&gt;handle(<span class=\"sf-dump-default sf-dump-ns\">\\r</span></span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-default>    $request = Request::capture()<span class=\"sf-dump-default sf-dump-ns\">\\r</span></span></code>
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+    <span class=\"sf-dump-meta sf-dump-ellipsization\" title=\"/Users/user/Desktop/App2Build/chatbot/salebot_laravel/server.php:19
+Stack level 1.\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/Users/user/Desktop/App2Build/chatbot/salebot_laravel</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/</span><span class=\"sf-dump-ellipsis-tail\">server.php:19</span></span> {<samp data-depth=3 class=sf-dump-compact>
+      &#8250; <code class=\"php\"><span class=sf-dump-default><span class=\"sf-dump-default sf-dump-ns\">\\r</span></span></code>
+      &#8250; <code class=\"php\"><span class=sf-dump-const>require_once __DIR__.&#039;/index.php&#039;;<span class=\"sf-dump-default sf-dump-ns\">\\r</span></span></code>
+      &#8250; 
+      <span class=sf-dump-meta>arguments</span>: { &#8230;1}
+    </samp>}
+  </samp>}
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1662141622\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000]: General error: 1 no such table: pages (SQL: select * from \"pages\" where \"pages\".\"id\" = 404 limit 1) at /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:760)
+[stacktrace]
+#0 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(720): Illuminate\\Database\\Connection->runQueryCallback('select * from \"...', Array, Object(Closure))
+#1 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(405): Illuminate\\Database\\Connection->run('select * from \"...', Array, Object(Closure))
+#2 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2705): Illuminate\\Database\\Connection->select('select * from \"...', Array, true)
+#3 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2694): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3230): Illuminate\\Database\\Query\\Builder->{closure:Illuminate\\Database\\Query\\Builder::get():2693}()
+#5 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2693): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(710): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(694): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Concerns/BuildsQueries.php(296): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#9 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(442): Illuminate\\Database\\Eloquent\\Builder->first(Array)
+#10 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/resources/views/errors/404.blade.php(1): Illuminate\\Database\\Eloquent\\Builder->find(404)
+#11 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(109): require('/Users/user/Des...')
+#12 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::{closure:Illuminate\\Filesystem\\Filesystem::getRequire():106}()
+#13 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Users/user/Des...', Array)
+#14 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Users/user/Des...', Array)
+#15 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('/Users/user/Des...', Array)
+#16 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#17 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#18 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#19 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#20 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(57): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 404, Array)
+#21 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(87): Illuminate\\Routing\\ResponseFactory->make(Object(Illuminate\\View\\View), 404, Array)
+#22 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(626): Illuminate\\Routing\\ResponseFactory->view('errors::404', Array, 404, Array)
+#23 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(554): Illuminate\\Foundation\\Exceptions\\Handler->renderHttpException(Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#24 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(460): Illuminate\\Foundation\\Exceptions\\Handler->prepareResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#25 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(377): Illuminate\\Foundation\\Exceptions\\Handler->renderExceptionResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#26 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(51): Illuminate\\Foundation\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#27 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(143): Illuminate\\Routing\\Pipeline->handleException(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#28 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():139}(Object(Illuminate\\Http\\Request))
+#29 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#32 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#35 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#37 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#39 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#41 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#43 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#44 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#45 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/index.php(60): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#46 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/server.php(19): require_once('/Users/user/Des...')
+#47 {main}
+
+[previous exception] [object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1 no such table: pages (SQL: select * from \"pages\" where \"pages\".\"id\" = 404 limit 1) at /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:760)
+[stacktrace]
+#0 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(720): Illuminate\\Database\\Connection->runQueryCallback('select * from \"...', Array, Object(Closure))
+#1 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(405): Illuminate\\Database\\Connection->run('select * from \"...', Array, Object(Closure))
+#2 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2705): Illuminate\\Database\\Connection->select('select * from \"...', Array, true)
+#3 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2694): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3230): Illuminate\\Database\\Query\\Builder->{closure:Illuminate\\Database\\Query\\Builder::get():2693}()
+#5 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2693): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(710): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(694): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Concerns/BuildsQueries.php(296): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#9 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(442): Illuminate\\Database\\Eloquent\\Builder->first(Array)
+#10 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/storage/framework/views/06b4aff27c5e178fbebba2a177dca4537c0c4bfc.php(2): Illuminate\\Database\\Eloquent\\Builder->find(404)
+#11 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(109): require('/Users/user/Des...')
+#12 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::{closure:Illuminate\\Filesystem\\Filesystem::getRequire():106}()
+#13 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Users/user/Des...', Array)
+#14 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Users/user/Des...', Array)
+#15 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('/Users/user/Des...', Array)
+#16 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#17 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#18 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#19 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#20 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(57): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 404, Array)
+#21 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(87): Illuminate\\Routing\\ResponseFactory->make(Object(Illuminate\\View\\View), 404, Array)
+#22 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(626): Illuminate\\Routing\\ResponseFactory->view('errors::404', Array, 404, Array)
+#23 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(554): Illuminate\\Foundation\\Exceptions\\Handler->renderHttpException(Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#24 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(460): Illuminate\\Foundation\\Exceptions\\Handler->prepareResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#25 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(377): Illuminate\\Foundation\\Exceptions\\Handler->renderExceptionResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#26 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(51): Illuminate\\Foundation\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#27 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(143): Illuminate\\Routing\\Pipeline->handleException(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#28 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():139}(Object(Illuminate\\Http\\Request))
+#29 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#32 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#35 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#37 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#39 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#41 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#43 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#44 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#45 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/index.php(60): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#46 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/server.php(19): require_once('/Users/user/Des...')
+#47 {main}
+
+[previous exception] [object] (PDOException(code: HY000): SQLSTATE[HY000]: General error: 1 no such table: pages at /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:414)
+[stacktrace]
+#0 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(414): PDO->prepare('select * from \"...')
+#1 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(753): Illuminate\\Database\\Connection->{closure:Illuminate\\Database\\Connection::select():405}('select * from \"...', Array)
+#2 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(720): Illuminate\\Database\\Connection->runQueryCallback('select * from \"...', Array, Object(Closure))
+#3 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(405): Illuminate\\Database\\Connection->run('select * from \"...', Array, Object(Closure))
+#4 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2705): Illuminate\\Database\\Connection->select('select * from \"...', Array, true)
+#5 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2694): Illuminate\\Database\\Query\\Builder->runSelect()
+#6 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3230): Illuminate\\Database\\Query\\Builder->{closure:Illuminate\\Database\\Query\\Builder::get():2693}()
+#7 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2693): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#8 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(710): Illuminate\\Database\\Query\\Builder->get(Array)
+#9 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(694): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#10 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Concerns/BuildsQueries.php(296): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#11 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(442): Illuminate\\Database\\Eloquent\\Builder->first(Array)
+#12 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/storage/framework/views/06b4aff27c5e178fbebba2a177dca4537c0c4bfc.php(2): Illuminate\\Database\\Eloquent\\Builder->find(404)
+#13 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(109): require('/Users/user/Des...')
+#14 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::{closure:Illuminate\\Filesystem\\Filesystem::getRequire():106}()
+#15 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Users/user/Des...', Array)
+#16 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Users/user/Des...', Array)
+#17 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('/Users/user/Des...', Array)
+#18 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#19 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#20 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#21 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#22 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(57): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 404, Array)
+#23 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(87): Illuminate\\Routing\\ResponseFactory->make(Object(Illuminate\\View\\View), 404, Array)
+#24 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(626): Illuminate\\Routing\\ResponseFactory->view('errors::404', Array, 404, Array)
+#25 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(554): Illuminate\\Foundation\\Exceptions\\Handler->renderHttpException(Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#26 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(460): Illuminate\\Foundation\\Exceptions\\Handler->prepareResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#27 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(377): Illuminate\\Foundation\\Exceptions\\Handler->renderExceptionResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#28 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(51): Illuminate\\Foundation\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#29 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(143): Illuminate\\Routing\\Pipeline->handleException(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException))
+#30 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():139}(Object(Illuminate\\Http\\Request))
+#31 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#34 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#37 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#39 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#41 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#43 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():155}:156}(Object(Illuminate\\Http\\Request))
+#45 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#47 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/index.php(60): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#48 /Users/user/Desktop/App2Build/chatbot/salebot_laravel/server.php(19): require_once('/Users/user/Des...')
+#49 {main}
+"} 

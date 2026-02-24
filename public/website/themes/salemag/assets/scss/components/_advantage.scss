@@ -1,0 +1,76 @@
+/*********************************
+/*  Advantage Section Start
+*********************************/
+.advantageCard {
+    background: var(--color-secondary);
+    border: 0.5px solid #0000001A;
+    border-radius: var(--radius-16);
+    padding: 36px 20px 56px;
+    text-align: center;
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+    transition: var(--transition);
+
+    &:hover {
+        border-color: rgba(var(--color-primary-rgb), 0.5);
+        .icon {
+            animation: bounce2 1.5s ease infinite;
+            // border-color: rgba(var(--color-primary-rgb), 0.5);
+        }
+    }
+
+    .icon {
+        height: 60px;
+        width: 60px;
+        background: var(--color-white);
+        border: 1px solid #0000001A;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+
+        img {
+            max-width: 24px;
+        }
+    }
+    .content {
+        .title {
+            font-family: var(--font-default);
+            font-size: 16px;
+            font-weight: var(--font-bold);
+            line-height: 26px;
+            color: var(--color-heading);
+            margin-bottom: 12px;
+        }
+        .desc {
+            font-family: var(--font-default);
+            font-size: 14px;
+            font-weight: var(--font-regular);
+            line-height: 26px;
+            color: var(--color-content);
+            margin-bottom: 0;
+
+        }
+    }
+}
+
+
+@keyframes bounce2 {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-20px);
+                transform: translateY(-20px);
+    }
+    60% {
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+    }
+}
+
+/*********************************
+/*  Advantage Section End
+*********************************/

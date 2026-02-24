@@ -1,0 +1,179 @@
+/*********************************
+/*  Footer Section Start
+*********************************/
+.footer__section {
+    padding-top: 80px;
+    background: var(--color-white);
+    position: relative;
+
+}
+.footer__inner {
+    border-top: 0.5px solid #0000001A;
+    border-bottom: 0.5px solid #0000001A;
+    padding-top: 48px;
+    padding-bottom: 24px;
+}
+
+.footer__top {
+    max-width: 526px;
+
+    @include respond (tabland) {
+        margin-bottom: 30px;
+    }
+    .footer {
+        &__logo {
+            margin-bottom: 16px;
+            img {
+                height: 48px;
+                width: auto;
+            }
+        }
+        &__slogun {
+            margin-bottom: 24px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            .title {
+                font-family: var(--font-default);
+                font-size: 20px;
+                line-height: 26px;
+                font-weight: var(--font-medium);
+                color: var(--color-content);
+                margin-bottom: 16px;
+            }
+            p {
+                font-family: var(--font-default);
+                font-size: 16px;
+                font-weight: var(--font-regular);
+                line-height: 24px;
+                color: var(--color-content2);
+                margin: 0;
+            }
+            .payment__icon {
+                max-width: 355px;
+                img {
+                    // height: 36px;
+                    // width: auto;
+                }
+            }
+        }
+    }
+}
+
+.footer__wrapper {
+    .footer {
+        &__widget {
+            .widget {
+                &__flex {
+                    display: flex;
+                    align-items: flex-start;
+
+                    .widget__list {
+                        min-width: 130px;
+                    }
+                }
+                &__title {
+                    font-family: var(--font-default);
+                    font-size: 20px;
+                    line-height: 26px;
+                    font-weight: var(--font-medium);
+                    color: var(--color-content);
+                    margin-bottom: 16px;
+                }
+                &__list {
+                    li {
+                        font-family: var(--font-default);
+                        font-size: 16px;
+                        font-weight: var(--font-regular);
+                        line-height: 20px;
+                        letter-spacing: 0.5px;
+                        list-style: none;
+                        padding: 8px 18px;
+                        color: var(--color-content);
+                        text-transform: capitalize;
+                        position: relative;
+                        
+                        a {
+                            position: relative;
+                            color: currentColor;
+                            transition: var(--transition);
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: -18px;
+                                top: 50%;
+                                -webkit-transform: translateY(-50%);
+                                transform: translateY(-50%);
+                                height: 8px;
+                                width: 8px;
+                                border-radius: 50%;
+                                background: var(--color-content);
+                                transition: var(--transition);
+                            }
+                            
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                width: 0;
+                                height: 1px;
+                                background: var(--color-content);
+                                bottom: -3px;
+                                right: 0;
+                                transition: var(--transition);
+                            }
+    
+                            &:hover {
+                                color: var(--color-primary);
+                                
+                                &::before {
+                                    background: var(--color-primary);
+                                }
+                                &::after {
+                                    width: 100%;
+                                    right: auto;
+                                    left: 0;
+                                    background: var(--color-primary);
+                                }
+                            }
+                        }
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.footer__bottom {
+    .footer {
+        &__copyright {
+            padding: 24px 0;
+
+            .copyright {
+                font-family: var(--font-default);
+                font-size: 16px;
+                font-weight: var(--font-regular);
+                line-height: 24px;
+                color: var(--color-heading);
+                margin-bottom: 0;
+
+                a {
+                    color: var(--color-primary);
+                    display: inline-block;
+                    text-decoration: none;
+                }
+        
+            }
+        }
+    }
+}
+
+/*********************************
+/*  Footer Section End
+*********************************/

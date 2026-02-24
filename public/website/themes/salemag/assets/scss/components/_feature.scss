@@ -1,0 +1,293 @@
+/*********************************
+/*  Feature Start
+*********************************/
+.feature__list {
+    padding-right: 30px;
+
+    @include respond (tabland) {
+        padding-right: 0;
+    }
+
+    .heading {
+        margin-bottom: 16px;
+        .title {
+            font-family: var(--font-default);
+            font-size: 20px;
+            font-weight: var(--font-medium);
+            line-height: 28px;
+            color: var(--color-heading);
+            margin-bottom: 8px;
+        }
+        .desc {
+            font-family: var(--font-default);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            color: var(--color-content);
+            margin-bottom: 0;
+
+        }
+    }
+    .feature__item {
+        position: relative;
+        margin-bottom: 12px;
+        padding-left: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 7px;
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: var(--color-content);
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        p {
+            font-family: var(--font-default);
+            font-size: 16px;
+            font-weight: var(--font-regular);
+            line-height: 24px;
+            color: var(--color-content);
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+/*********************************
+/*  Feature End
+*********************************/
+
+/*********************************
+/*  Tabs Start
+*********************************/
+.custom__tabs {
+    background: var(--color-white);
+    border: 0.5px solid #0000001A;
+    border-radius: var(--radius);
+    padding: 6px;
+    position: relative;
+
+    @include respond (tabport) {
+        margin-top: 20px;
+    }
+    @include respond (phone-mid) {
+        border-radius: var(--radius-8);
+    }
+
+    &.v2 {
+        max-width: 312px;
+        margin: 0 auto 50px;
+
+        @include respond (tabport) {
+            margin-top: 0px;
+        }
+        @include respond (phone-mid) {
+            border-radius: var(--radius);
+        }
+
+        .nav {
+            @include respond (phone-mid) {
+                flex-wrap: nowrap;
+            }
+            &-item {
+                width: 100%;
+            }
+        }
+
+        .badges {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 100%;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 0px;
+            margin-left: 6px;
+
+            @include respond (tabport) {
+                margin: 0;
+                bottom: -40px;
+                transform: inherit;
+                top: auto;
+                left: auto;
+                right: 0;
+            }
+            
+
+            span {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 15.23px;
+                padding: 6px 12px;
+                background: var(--color-primary2);
+                border-radius: 4px;
+                color: var(--color-white);
+            }
+        }
+    }
+
+    .nav {
+        margin: 0;
+        flex-wrap: nowrap;
+        gap: 12px;
+
+        @include respond (phone-mid) {
+            flex-wrap: wrap;
+        }
+
+        &-item {
+            width: 100%;
+
+            @include respond (phone-mid) {
+                width: calc(50% - 12px);
+            }
+            @media (max-width: 374px) {
+                &:first-of-type {
+                    width: 100%;
+                }
+            }
+        }
+
+        &-link {
+            font-family: var(--font-default);
+            font-size: 16px;
+            font-weight: var(--font-medium);
+            line-height: 15.92px;
+            color: var(--color-content2);
+            padding: 12px 13px;
+            border: 1px solid #0000000A;
+            border-radius: var(--radius);
+            width: 100%;
+            white-space: nowrap;
+            text-transform: capitalize;
+            
+            &.active {
+                background-color: var(--color-primary);
+                color: var(--color-white);
+                border-color: var(--color-primary);
+            }
+            
+            @include respond (phone-sm) {
+                font-size: 14px;
+            }
+            @include respond (phone-mid) {
+                white-space: wrap;
+            }
+        }
+    }
+}
+
+.feature__inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 50px;
+
+    &:nth-of-type(even) {
+        flex-direction: row-reverse;
+    }
+
+    @include respond (tabport) {
+        flex-direction: column-reverse !important;
+        gap: 35px;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .feature__list {
+        padding-right: 0;
+        flex: 1;
+        .feature__item {
+            p {
+                color: var(--color-content2);
+            }
+            &::before {
+                background: var(--color-content2);
+            }
+        }
+    }
+    .feature__thumb {
+        flex: 1;
+        
+        img {
+            width: 100%;
+            border-radius: var(--radius-16);
+            max-width: 540px;
+        }
+    }
+}
+/*********************************
+/*  Tabs End
+*********************************/
+
+
+/*********************************
+/*  Info list Start
+*********************************/
+.info__list {
+    border-top: 0.5px solid #0000001A;
+    padding-top: 18px;
+
+    @include respond (tabland) {
+        // margin-bottom: 40px;
+    }
+    .info__title {
+        font-family: var(--font-default);
+        font-size: 16px;
+        font-weight: var(--font-medium);
+        line-height: 24px;
+        color: var(--color-heading);
+        margin-bottom: 18px;
+    }
+    .info__item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .icon {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-white);
+            border: 1px solid #0000001A;
+            border-radius: 50%;
+
+            img {
+                max-width: 20px;
+            }
+        }
+        a {
+            font-family: var(--font-default);
+            font-size: 18px;
+            font-weight: var(--font-medium);
+            line-height: 24px;
+            color: var(--color-content);
+            display: inline-block;
+            transition: var(--transition);
+
+            &:hover {
+                color: var(--color-primary);
+            }
+
+        }
+    }
+}
+/*********************************
+/*  Info list End
+*********************************/

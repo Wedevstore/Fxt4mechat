@@ -1,0 +1,85 @@
+/*********************************
+/*  Button Start
+*********************************/
+
+.btn {
+	font-family: $default;
+	font-size: 15px;
+	line-height: 24px;
+	font-weight: $medium;
+	letter-spacing: 0.5px;
+	padding: 12px 24px;
+	border-radius: $radius;
+	border: none;
+	outline: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	text-transform: capitalize;
+	transition: $transition;
+	box-shadow: inset 0px 2px 1px 0px rgba($white, 0.2),
+				inset 0px 0px 1px -1px rgba($black, 0.25),
+				inset 0px 2px 6px 0px rgba($black, 0.1);
+
+	i {
+		font-size: 17px;
+	}
+
+	&:focus {
+		box-shadow: none;
+		outline: none;
+	}
+
+	&-primary {
+		background-color: $primary;
+		color: $white;
+		// transition: $transition;
+
+		&:focus,
+		&:hover {
+			border-color: $secondary;
+			background: $secondary;
+			color: $white;
+			box-shadow: none;
+		}
+	}
+	&-secondary {
+		background-color: #100F49;
+		color: rgba($white, 0.87);
+		border: 1px solid rgba($white, 0.1);
+		// box-shadow: inset 0px 1px 0px 0px rgba($white, 0.2),
+		// 			inset 0px 2px 1px 0px rgba($black, 0.08),
+		// 			inset 0px 4px 8px 0px rgba($black, 0.06);
+
+
+		box-shadow: inset 0px 2px 1px 0px rgba($white, 0.2),
+					inset 0px 0px 1px -1px rgba($black, 0.25),
+					inset 0px 2px 6px 0px rgba($black, 0.1);
+
+
+		&:focus,
+		&:hover {
+			background: $primary;
+			color: $white;
+			border-color: $primary;
+			box-shadow: inset 0px 1px 0px 0px rgba($white, 0.2),
+					inset 0px 2px 1px 0px rgba($black, 0.08),
+					inset 0px 4px 8px 0px rgba($black, 0.06);
+		}
+	}
+}
+
+.solid__btn {
+	font-family: $default;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: $semibold;
+	letter-spacing: 0.5px;
+	color: $heading;
+	transition: $transition;
+
+	&:hover {
+		color: $primary;
+	}
+}

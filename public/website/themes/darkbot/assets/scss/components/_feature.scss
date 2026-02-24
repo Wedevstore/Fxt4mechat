@@ -1,0 +1,72 @@
+/*********************************
+/*  Feature Section Start
+*********************************/
+.feature__section {
+    position: relative;
+    margin-top: -100px;
+}
+.featureBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 16px;
+
+    &__wrapper {
+        max-width: 1200px;
+        margin: auto;
+        padding: 130px 94px 60px;
+        background: rgb(2,4,20);
+        background: linear-gradient(180deg, rgba(2,4,20,1) 0%, rgba(255,255,255,0.06) 100%);
+
+        @include respond (tabland) {
+            padding: 130px 60px 60px;
+        }
+        @include respond (phone-sm) {
+            padding: 130px 24px 60px;
+        }
+    }
+    
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px 16px;
+        
+        @include respond (tabland) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include respond (phone) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 16px;
+        }
+
+    }
+
+    &__icon {
+        height: 22px;
+        width: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font-size: 21px;
+            color: $secondary;
+        }
+    }
+    &__content {
+        flex: 1;
+        .title {
+            font-family: $default;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: $medium;
+            letter-spacing: 0.5px;
+            color: $content;
+            margin-bottom: 0;
+        }
+    }
+}
+/*********************************
+/*  Feature Section End
+*********************************/

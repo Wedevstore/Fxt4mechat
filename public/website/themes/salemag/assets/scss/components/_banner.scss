@@ -1,0 +1,203 @@
+/*********************************
+/*  Banner Section Start
+*********************************/
+.banner__section {
+	position: relative;
+	background-color: var(--color-secondary);
+	padding-top: 170px;
+	z-index: 1;
+
+	@include respond (phone) {
+		padding-top: 140px;
+	}
+	@include respond (phone-sm) {
+		padding-top: 120px;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url("../images/banner/banner-overlay.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center bottom;
+		z-index: -1;
+	}
+}
+
+.hero__text {
+	position: relative;
+	max-width: 800px;
+	margin: auto;
+
+	.subtitle {
+		font-family: var(--font-default);
+		background: #DDDDDD;
+		padding: 3px 13px 3px 3px;
+		border-radius: 30px;
+		color: var(--color-content);
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: var(--font-regular);
+		margin-bottom: 16px;
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		text-transform: capitalize;
+		border: 1px solid rgba(var(--color-black-rgb), 0.1);
+
+		.icon {
+			width: 24px;
+			height: 24px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			background: var(--color-white);
+
+			img {
+				width: 16px;
+			}
+		}
+	}
+
+	.title {
+		font-family: var(--font-default);
+		font-size: 54px;
+		line-height: 64px;
+		font-weight: var(--font-bold);
+		color: var(--color-heading);
+		margin-bottom: 0;
+		text-transform: capitalize;
+
+		@include respond(tabland) {
+			font-size: 50px;
+			line-height: 60px;
+		}
+		@include respond(tabport) {
+			font-size: 38px;
+			line-height: 50px;
+		}
+		@include respond(phone) {
+			font-size: 36px;
+			line-height: 50px;
+		}
+		
+
+		@include respond(phone-sm) {
+			br {
+				display: none;
+			}
+		}	
+		@include respond(phone-mid) {
+			font-size: 32px;
+			// font-size: 30px;
+			line-height: 40px;
+		}
+	}
+
+	.desc {
+		font-size: 16px;
+		line-height: 24px;
+		color: var(--color-content);
+		margin: 18px 0 0;
+		padding: 0 30px;
+
+		@include respond (tabport) {
+			padding: 0;
+		}
+	}
+	.btn__group {
+		display: inline-flex;
+		align-items: center;
+		gap: 20px;
+		margin-top: 24px;
+
+		@include respond(phone-xm) {
+			gap: 10px;
+		}
+
+		.btn {
+			@include respond (phone-xm) {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.banner__list {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 15px 30px;
+	margin-top: 18px;
+
+	li {
+		font-size: 16px;
+		font-weight: var(--font-default);
+		line-height: 24px;
+		color: var(--color-heading);
+		position: relative;
+
+		&::before {
+			content: "";
+			height: 8px;
+			width: 8px;
+			border-radius: 50%;
+			background: var(--color-heading);
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: -17px;
+		}
+
+		a {
+			color: currentColor;
+			display: inline-block;
+
+			&:hover {
+				color: var(--color-primary);
+			}
+		}
+
+	}
+}
+
+.banner__thumb {
+	position: relative;
+	margin-top: 30px;
+
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+		max-width: 1040px;
+		position: relative;
+		margin: auto;
+	}
+	// .animation__01 {
+	// 	animation: MoveMain 3s linear infinite alternate;
+	// 	z-index: 11;
+	// }
+	// @include respond(tabland) {
+	// 	display: none;
+	// }
+}
+// @keyframes MoveMain {
+// 	0% {
+// 		transform: translateX(0);
+// 	}
+// 	100% {
+// 		transform: translateX(-30px);
+// 	}
+// }
+/*********************************
+/*  Banner Section End
+*********************************/

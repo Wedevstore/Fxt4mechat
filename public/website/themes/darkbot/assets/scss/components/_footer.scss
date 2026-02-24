@@ -1,0 +1,217 @@
+/*********************************
+/*  Footer Section Start
+*********************************/
+.footer__section {
+    padding-top: 155px;
+    background: $bg;
+    position: relative;
+    margin-top: -55px;
+    
+    @include respond (phone) {
+		margin-top: 0;
+        padding-top: 40px;
+	}
+
+    .col {
+        @include respond (tabland) {
+            display: none;
+        }
+    }
+    .col-lg-4 {
+        @include respond (tabport) {
+            order: 3;
+        }
+    }
+}
+
+.footer__wrapper {
+    padding-bottom: 78px;
+    .footer__widget {
+        .widget {
+            &__title {
+                font-family: $default;
+                font-size: 20px;
+                line-height: normal;
+                letter-spacing: 0.23px;
+                color: $white;
+                margin-bottom: 31px;
+            }
+            &__wrap {
+                .language__dropdown {
+                    margin-bottom: 20px;
+                    list-style: none;
+                    font-size: 14px;
+                    line-height: 24px;
+                    letter-spacing: 0.15px;
+                    color: $content;
+                    padding: 0;
+                    filter: none;
+                    background-image: none;
+                    appearance: auto;
+                    right: 5px;
+                    position: relative;
+                }
+            }
+            &__list {
+                li {
+                    margin-bottom: 20px;
+                    list-style: none;
+                    font-size: 14px;
+                    line-height: 24px;
+                    letter-spacing: 0.15px;
+                    color: $content;
+                    a {
+                        color: currentColor;
+                        transition: $transition;
+
+                        &.active,
+                        &:hover {
+                            color: $white;
+                            text-decoration: underline;
+                        }
+                    }
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .social__icon {
+        display: inline-flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 17px;
+        a {
+            height: 33px;
+            width: 33px;
+            // background: #32363a;
+            background: #5d5d5d54;
+            color: #adafb0;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 33px;
+            transition: $transition;
+    
+            &:hover {
+                background: #5c6063;
+                color: $white;
+            }
+        }
+    }
+}
+
+
+.footer__slogun {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: $semibold;
+    color: $heading;
+    margin-bottom: 36px;
+
+    @include respond (phone) {
+        font-size: 24px;
+        line-height: 34px;
+    }
+}
+.footer__link {
+    position: relative;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    &:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    .icon {
+        height: 40px;
+        width: 40px;
+        background: #353349;
+        border: 1px solid $border;
+        border-radius: 50%;
+        @include flexbox($a: center,  $jc: center);
+
+        img {
+            width: 17px;
+        }
+    }
+
+    a {
+        font-family: $default;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: $medium;
+        letter-spacing: 0.75px;
+        color: $white;
+        transition: $transition;
+        text-underline-offset: 2px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer__bottom {
+    background: $bg2;
+    border-top: 1px solid rgba($white, 0.14);
+    border-bottom: 1px solid rgba($white, 0.14);
+    padding: 15px 0;
+
+    .footer {
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            @include respond (tabport) {
+                flex-direction: column;
+                gap: 25px;
+            }
+        }
+
+        &__logo {
+            max-width: 170px;
+
+            @include respond (phone) {
+                width: 140px;
+            }
+        }
+        &__apps {
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+    }
+}
+.footer__copyright {
+    background: $bg2;
+    padding: 20px 0;
+    .copyright p {
+        font-family: $default;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: $regular;
+        letter-spacing: 0.15px;
+        color: $content;
+        margin-bottom: 0;
+
+        a {
+            color: $heading;
+            transition: $transition;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+/*********************************
+/*  Footer Section End
+*********************************/

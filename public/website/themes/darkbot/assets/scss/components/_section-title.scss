@@ -1,0 +1,85 @@
+/*********************************
+/*  Section Tittle Start
+*********************************/
+.section__title {
+	max-width: 793px;
+	margin: 0 auto 60px;
+
+	// &-wrapper {
+	// 	margin-bottom: 60px;
+
+	// 	@include respond(tabport) {
+	// 		margin-bottom: 40px;
+	// 	}
+
+	// 	&.text-center {
+	// 		.section__title {
+	// 			margin: auto;
+	// 			text-align: center;
+	// 		}
+	// 	}
+	// 	&.text-start {
+	// 		.section__title {
+	// 			margin-right: auto;
+	// 			text-align: left;
+	// 		}
+	// 	}
+	// 	&.text-end {
+	// 		.section__title {
+	// 			margin-left: auto;
+	// 			text-align: right;
+	// 		}
+	// 	}
+
+	// 	.section__btn {
+	// 		@include respond(tabport) {
+	// 			margin-top: 20px;
+	// 		}
+	// 		.btn {
+	// 			white-space: nowrap;
+	// 		}
+	// 	}
+	// }
+
+	.title {
+		font-family: $default;
+		font-size: 40px;
+		line-height: 48px;
+		font-weight: $bold;
+		color: $heading;
+		margin-bottom: 0;
+		text-transform: capitalize;
+
+		@include respond(tabport) {
+			font-size: 32px;
+			line-height: 48px;
+		}
+
+		@include respond(phone-sm) {
+			font-size: 30px;
+			line-height: 40px;
+		}
+		@include respond(phone-mid) {
+			font-size: 24px;
+			line-height: 28px;
+		}
+	}
+	p,
+	.desc {
+		font-family: $default;
+		font-size: 18px;
+		font-weight: $regular;
+		line-height: 27px;
+		color: $content;
+		letter-spacing: 0.5px;
+		margin: 24px 0 0;
+
+		@include respond(phone-sm) {
+			margin: 15px 0 0;
+		}
+	}
+}
+
+/*********************************
+/*  Section Tittle End
+*********************************/

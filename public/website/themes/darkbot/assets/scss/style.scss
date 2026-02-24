@@ -1,0 +1,61 @@
+/*-------------------------------------
+    Template Name:  Delix - Logistics and Transportation Html Template 
+    Template URI: https://---.com
+    Description:  Delix - Logistics and Transportation Html Template
+    Author: ...
+    Author URI: https://---.com
+    Version: 1.0
+    Tags: theme, template, etc
+---------------------------------------*/
+
+/*
+    Table of Context
+    -------------------------------
+    01. Common CSS
+    02. Content Box
+    03. Video Box
+    04. Icon Box
+    05. Order, Unorder List
+    06. Round One side
+    07. Overlap Image Box
+    08. Image Box
+    09. Icon list block
+    
+    01. Header style
+    02. Banner style
+   
+*/
+
+/*********************************
+/* Fonts
+/* DM Sans
+/* 
+/*
+*********************************/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+// Partial files
+@import "base/functions";
+// @import "base/themes";
+@import "base/mediaQuery";
+@import "base/variables";
+@import "base/mixins";
+@import "base/reset";
+@import "base/util";
+@import "base/common";
+
+// Components
+@import "components/button";
+@import "components/section-title";
+@import "components/header";
+@import "components/banner";
+@import "components/breadcrumb";
+@import "components/feature";
+@import "components/advantage";
+@import "components/pricing";
+@import "components/accordion";
+@import "components/ctaBox";
+@import "components/testimonial";
+@import "components/privacy";
+@import "components/footer";
+

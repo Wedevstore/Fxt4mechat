@@ -1,0 +1,64 @@
+/*********************************
+/*  Partner Section Start
+*********************************/
+.partner__wrapper {
+    max-width: 780px;
+    margin: auto;
+    .partner__title {
+        font-family: var(--font-default);
+        font-size: 20px;
+        line-height: 40px;
+        font-weight: var(--font-regular);
+        color: var(--color-heading);
+        padding: 10px;
+        border-bottom: 1px solid #0000001A;
+        display: block;
+        text-align: center;
+
+        @include respond (phone-sm) {
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+}
+
+.marquee {
+    overflow: hidden;
+    margin-top: 36px;
+
+    &__content {
+        display: flex;
+        animation: scrolling 10s linear infinite;
+        gap: 40px;  
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+
+        img {
+            display: block;
+            width: auto;
+            filter: opacity(0.5);
+        }
+    }
+}
+  
+//   @keyframes scrolling {
+//     0% { transform: translateX(0); }
+//     100% { transform: translatex(-144vw); }
+//   }
+
+@keyframes scrolling {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+}
+  
+
+/*********************************
+/*  Partner Section End
+*********************************/
+

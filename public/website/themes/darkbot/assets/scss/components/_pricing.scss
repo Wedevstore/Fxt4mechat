@@ -1,0 +1,159 @@
+/*********************************
+/*  Pricing Section Start
+*********************************/
+.pricing__section {
+    background: rgb(27,25,50);
+    background: linear-gradient(180deg, rgba(27,25,50,0) 0%, rgba(255,255,255,0.06) 100%);
+}
+.pricing__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+
+	@include respond(tabland) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include respond(phone) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+.pricing__item {
+	padding: 36px 40px 40px;
+	border: 1px solid $border;
+	background: $bg;
+	border-radius: $radius;
+	transition: $transition;
+
+    @include respond (tabport) {
+        padding: 30px 20px;
+    }
+
+	.pricing {
+		&__header {
+			margin-bottom: 30px;
+
+            @include respond (phone-sm) {
+                margin-bottom: 24px;
+            }
+			.title {
+				font-size: 20px;
+				line-height: 24px;
+                letter-spacing: 0.5px;
+                font-weight: bold;
+				margin-bottom: 10px;
+                text-transform: capitalize;
+
+                @include respond (phone-sm) {
+                    font-size: 18px;
+                }
+			}
+			p,
+			.desc {
+				font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                margin-bottom: 0;
+
+                @include respond (phone-sm) {
+                    font-size: 14px;
+                }
+			}
+		}
+		&__tag {
+            margin-bottom: 38px;
+
+            @include respond (phone-sm) {
+                margin-bottom: 32px;
+            }
+			span {
+                font-family: $default;
+                font-size: 32px;
+                line-height: 32px;
+                letter-spacing: 0.5px;
+                font-weight: $bold;
+                color: $heading;
+                display: inline-flex;
+                align-items: flex-start;
+                position: relative;
+                gap: 2px;
+                transition: $transition;
+
+                sub {
+                    font-size: 18px;
+                    line-height: 17px;
+                    letter-spacing: 0.5px;
+                    font-weight: $medium;
+                    color: $content;
+                    margin-left: 4px;
+                    position: relative;
+                    bottom: -10px;
+                }
+            }
+		}
+		
+		&__features {
+			li {
+				font-family: $default;
+				font-size: 16px;
+				line-height: 24px;
+                letter-spacing: 0.5px;
+				font-weight: $regular;
+                color: $heading;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				margin-bottom: 20px;
+				transition: $transition;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                @include respond (tabport) {
+                    font-size: 15px;
+                }
+                @include respond (phone) {
+                    font-size: 16px;
+                }
+
+				i {
+					font-size: 22px;
+					color: $primary;
+
+                    @include respond (tabport) {
+                        font-size: 16px;
+                    }
+				}
+			}
+		}
+        &__btn {
+			margin-top: 48px;
+
+            .btn {
+                background: #353349;
+                border: none;
+            }
+		}
+	}
+	&.active,
+	&:hover {
+        box-shadow:  0px 1px 0px 0px #FA5560,
+					 0px 0px 0px 1px #B14BF4,
+					 0px 1px 0px 0px #4D91FF;
+
+		.pricing {
+			&__btn {
+				.btn {
+					background: $primary;
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+/*********************************
+/*  Pricing Section End
+*********************************/

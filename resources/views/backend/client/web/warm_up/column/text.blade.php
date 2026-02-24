@@ -1,0 +1,1 @@
+<td>{{ $reply->reply_text }}</td>

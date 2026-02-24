@@ -1,0 +1,74 @@
+/*********************************
+/*  Button Start
+*********************************/
+.btn {
+	font-family: var(--font-default);
+	font-size: 16px;
+	line-height: 17px;
+	font-weight: var(--font-medium);
+	padding: 13px 23px;
+	border-radius: var(--radius);
+	border: none;
+	outline: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	text-transform: capitalize;
+	transition: var(--transition);
+
+
+	&:focus {
+		box-shadow: none;
+		outline: none;
+	}
+
+	&-primary {
+		background-color: var(--color-primary);
+		color: var(--color-white);
+		border: 1px solid var(--color-primary);
+
+		&:focus,
+		&:hover {
+			border-color: var(--color-heading);
+			background-color: var(--color-heading);
+			color: var(--color-white);
+			box-shadow: none;
+
+		}
+	}
+	&-secondary {
+		background-color: var(--color-primary2);
+		color: var(--color-white);
+		border: 1px solid var(--color-primary2);
+
+		&:focus,
+		&:hover {
+			background-color: var(--color-heading);
+			color: var(--color-white);
+			box-shadow: none;
+			border-color: var(--color-heading);
+		}
+	}
+}
+
+.solid__btn {
+	font-family: var(--font-default);
+	font-size: 14px;
+	font-weight: var(--font-semibold);
+	line-height: 20px;
+	color: var(--color-heading);
+	text-transform: uppercase;
+	transition: var(--transition);
+
+	i {
+		font-size: 14px;
+		margin-left: 8px;
+	}
+	&:hover {
+		color: var(--color-primary);
+	}
+}
+/*********************************
+/*  Button End
+*********************************/

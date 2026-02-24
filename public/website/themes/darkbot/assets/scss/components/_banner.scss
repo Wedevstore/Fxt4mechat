@@ -1,0 +1,98 @@
+/*********************************
+/* Banner Section Start
+*********************************/
+.banner__section {
+	// background: #b8b8b81a;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding: 172px 0 0px;
+	z-index: 9;
+
+	@include respond (tabport) {
+		padding: 122px 0 0px !important;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url('../images/banner/banner-mask.svg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		z-index: -1;
+	}
+}
+
+
+/* Hero Text Start */
+.hero__text {
+	position: relative;
+	max-width: 770px;
+	z-index: 1;
+	margin: auto;
+
+	.title {
+		color: $heading;
+		margin-bottom: 0;
+
+		span {
+			background: -webkit-linear-gradient(left, rgba(#FA5560, 1) 0%, rgba(#B14BF4, 1) 52%, rgba(#4D91FF, 1) 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		&.gradient {
+			background: linear-gradient(180deg, rgba(245,245,245,1) 10%, rgba(245,245,245,0.9) 57%, rgba(115,115,115, 0) 100%);
+            -webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	.desc {
+		font-size: 18px;
+		line-height: 27px;
+		letter-spacing: 0.5px;
+		color: #D4D4D4;
+		max-width: 668px;
+		margin: 24px auto 0;
+		
+		@include respond(phone-sm) {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+	.btn__group {
+		margin-top: 40px;
+		display: inline-flex;
+		align-items: center;
+		gap: 16px;
+
+		@include respond (phone-sm) {
+			display: flex;
+			flex-direction: column;
+
+			.btn {
+				width: 300px;
+			}
+		}
+	}
+}
+
+
+.banner__thumb {
+	max-width: 945px;
+	margin: 72px auto 0;
+
+	@include respond (phone) {
+		margin-top: 40px;
+	}
+}
+
+/*********************************
+/* Banner Section End
+*********************************/

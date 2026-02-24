@@ -1,0 +1,129 @@
+/*********************************
+/* Advantage Section Start
+*********************************/
+.advantage__card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    padding: 50px 0 0 50px;
+    border: 1px solid $border;
+    border-radius: $radius;
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+    background: linear-gradient(0deg, rgba(255,255,255,0.06) 0%, rgba(27,25,50,0.1) 100%);
+
+    &.grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+
+        @include respond (tabport) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 0;
+        }
+    }
+    @include respond (medium) {
+        padding: 30px 0 0 30px;
+    }
+    @include respond (phone) {
+        padding: 24px 0 0 24px;
+    }
+
+
+    .advantage {
+        &__content {
+            max-width: 80%;
+
+            @include respond (medium) {
+                max-width: 100%;
+                padding-right: 15px;
+            }
+            @include respond (tabland) {
+                margin-bottom: 50px;
+            }
+            @include respond (phone-sm) {
+                margin-bottom: 25px;
+            }
+            .title {
+                font-family: $default;
+                font-size: 24px;
+                line-height: 32px;
+                font-weight: $bold;
+                color: $heading;
+                letter-spacing: 0.5px;
+
+                @include respond (tabland) {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+                @include respond (tabport) {
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+                @include respond (phone-sm) {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+            p,
+            .desc {
+                margin-top: 20px;
+                margin-bottom: 0;
+                // padding-right: 50px;
+            }
+        }
+        &__thumb {
+            flex: 1;
+            width: 100%;
+            height: auto;
+            display: inline-block;
+            // aspect-ratio: 5.7/4.2;
+            position: relative;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+                // height: 100%;
+
+            }
+
+            .video__play {
+                font-size: 26px;
+                color: $primary;
+                height: 80px;
+                width: 80px;
+                border-radius: 50%;
+                background: $white;
+                background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.3) 100%);
+                box-shadow: 0px 5px 10px rgba(#02001B, 0.8),
+					0px 10px 20px rgba(#02001B, 0.10);
+                border: 1px solid $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: pulse-animation 2s infinite;
+                transition: $transition;
+
+                &:hover {
+                    transform: translate(-50%, -50%) scale(1.1);
+                }
+                  
+                  @keyframes pulse-animation {
+                    0% {
+                      box-shadow: 0 0 0 0px rgba($primary, 0.4);
+                    }
+                    100% {
+                      box-shadow: 0 0 0 40px rgba($primary, 0);
+                    }
+                  }
+            }
+        }
+    }
+}
+
+/*********************************
+/* Advantage Section End
+*********************************/

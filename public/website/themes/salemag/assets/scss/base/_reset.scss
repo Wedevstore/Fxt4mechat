@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	background: var(--color-white);
+	font-family: var(--font-default);
+	font-weight: var(--font-regular);
+	font-size: 1.6rem;
+	line-height: 2.7rem;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		outline: 0px;
+	}
+}
+button {
+	&:hover,
+	&:focus {
+		outline: 0px;
+	}
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: var(--font-regular);
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+	user-select: none;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: inherit;
+}
+figure {
+	margin: 0;
+}
+
+// section {
+// 	display: block;
+// 	position: relative;
+// 	// padding: 100px 0;
+// 	width: 100%;
+// 	z-index: 1;
+
+// 	@include respond (tabport) {
+// 		padding: 60px 0 !important;
+// 	}
+// }

@@ -1,0 +1,1 @@
+<td>{{ $query->title }}</td>

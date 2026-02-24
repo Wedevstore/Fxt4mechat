@@ -1,0 +1,201 @@
+/*********************************
+/* Accordion Start
+*********************************/
+.accordion__wrapper {
+    position: relative;
+    background: var(--color-secondary);
+    border-radius: var(--radius-16);
+    padding: 24px;
+
+	@include respond (tabland) {
+		margin-top: 40px;
+	}
+	.accordionjs {
+		margin: 0;
+		// margin: 5px 0 0;
+
+		.acc_head {
+			padding: 0;
+		}
+		.accordion__main {
+            background-color: var(--color-white);
+			padding: 12px;
+            border-radius: var(--radius-8);
+            margin-bottom: 12px;
+			border: 1px solid #0000001A;
+			transition: var(--transition);
+
+			&.acc_active {
+				background-color: var(--color-white);
+				border-color: rgba(var(--color-primary-rgb), 0.5);
+
+				.accordion__tab {
+					background: transparent;
+					border: none;
+					color: var(--color-primary);
+
+					&::after {
+						content: "\ea78";
+						color: var(--color-primary);
+					}
+                    .icon {
+                        svg {
+                            path {
+                                fill: var(--color-primary);
+                            }
+                        }
+                    }
+				}
+			}
+		}
+		.accordion__tab {          
+			font-family: var(--font-default);
+			font-size: 16px;
+            line-height: 18px;
+			font-weight: var(--font-regular);
+			color: var(--color-content);
+			width: 100%;
+			text-align: left;
+			background: transparent;
+			border: none;
+			position: relative;
+			cursor: pointer;
+			transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+			padding-right: 25px;
+
+			&::after {
+				content: "\ea4e";
+				font-size: 20px;
+				position: absolute;
+				top: 0;
+				right: 0px;
+				// transform: translateY(-50%);
+				color: var(--color-content);
+				height: auto;
+				width: auto;
+				font-family: "remixicon";
+
+			}
+
+            .icon {
+                svg {
+                    width: 30px;
+                    height: 30px; 
+					@include respond (phone) {
+						width: 20px;
+						height: auto;
+					}
+                    path {
+                        fill: var(--color-content);
+                        transition: var(--transition);
+                    }
+                }
+            }
+
+			&:hover {
+				color: var(--color-primary);
+
+                .icon {
+                    svg {
+                        path {
+                            fill: var(--color-primary);
+                        }
+                    }
+                }
+			}
+		}
+		.accordion__panel {
+			padding: 12px 0 0px;
+
+			.desc {
+				font-family: var(--font-default);
+                font-size: 14px;
+                line-height: 26px;
+                font-weight: var(--font-regular);
+                color: var(--color-content2);
+                margin-bottom: 0;
+			}
+		}
+	}
+	&.v2 {
+		padding: 0;
+		border-radius: 0;
+		background: transparent;
+
+		.accordionjs {
+			margin: 0;
+			// margin: 5px 0 0;
+	
+			.acc_head {
+				// padding: 0;
+			}
+			.accordion__main {
+				background-color: var(--color-white);
+				padding: 20px;
+				margin-bottom: 1px;
+				border-radius: 0;
+				border: 1px solid transparent;
+				// border-bottom-color: #0000001A;
+				transition: var(--transition);
+				
+				&.acc_active {
+					background-color: var(--color-secondary);
+					// border: 1px solid #0000001A;
+					border-color: rgba(var(--color-primary-rgb), 0.5);
+					border-radius: 12px;
+	
+					.accordion__tab {
+						background: transparent;
+						// color: var(--color-heading);
+	
+						&::after {
+							content: "\f1af";
+							// color: var(--color-heading);
+						}
+					}
+				}
+			}
+			.accordion__tab {          
+				font-size: 18px;
+				line-height: 26px;
+				font-weight: var(--font-medium);
+				color: var(--color-heading);
+				
+
+				@include respond (tabport) {
+					font-size: 16px;
+				}
+				
+				&::after {
+					content: "\ea13";
+					font-family: "remixicon";
+					color: var(--color-heading);
+					font-size: 25px;
+
+					@include respond (tabport) {
+						font-size: 20px;
+					}
+	
+				}
+			}
+			.accordion__panel {
+				.desc {
+					font-size: 16px;
+					line-height: 26px;
+
+					@include respond (tabport) {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*********************************
+/* Accordion End
+*********************************/

@@ -1,0 +1,112 @@
+/*********************************
+/*  Section Tittle Start
+*********************************/
+.section__title {
+	flex: 1;
+	&-wrapper {
+		max-width: 582px;
+		margin-bottom: 40px;
+		
+		&.flex-item {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+			gap: 40px;
+			max-width: 100%;
+			margin-bottom: 50px;
+			border-bottom: 0.5px solid #0000001A;
+			padding-bottom: 16px;
+
+			@include respond (tabland) {
+				gap: 20px;
+			}
+			@include respond (tabport) {
+				display: block;
+				text-align: center;
+			}
+		}
+		&.text-center {
+			margin: 0 auto 40px;
+		}
+	}
+
+	&.text-white {
+		.title {
+			color: var(--color-white);
+		}
+		p,
+		.desc {
+			color: rgba(var(--color-white-rgb), 0.7);
+		}
+	}
+
+	.subtitle {
+		font-family:var(--font-default);
+		font-size: 16px;
+		font-weight: var(--font-regular);
+		line-height: 24px;
+		color: var(--color-primary);
+		border: 0.5px solid rgba(var(--color-primary-rgb), 0.2);
+		border-radius: 100px;
+		background: var(--color-white);
+		padding: 4px 14px 4px 4px;
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		margin-bottom: 12px;
+		text-transform: capitalize;
+
+		.icon {
+			height: 24px;
+			width: 24px;
+			background: rgba(var(--color-primary-rgb), 0.1);
+			border: 0.5px solid rgba(var(--color-primary-rgb), 0.2);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			img {
+				width: 12px;
+			}
+		}
+
+	}
+
+	.title {
+		font-family: var(--font-default);
+		font-size: 36px;
+		line-height: 44px;
+		font-weight: var(--font-medium);
+		color: var(--color-heading);
+		margin-bottom: 0;
+
+		@include respond(tabport) {
+			font-size: 32px;
+			line-height: 42px;
+
+			br {
+				display: none;
+			}
+		}
+
+		@include respond(phone-mid) {
+			font-size: 28px;
+			line-height: 34px;
+		}
+	
+	}
+	p,
+	.desc {
+		font-family: var(--font-default);
+		font-size: 16px;
+		font-weight: var(--font-regular);
+		line-height: 24px;
+		color: var(--color-content2);
+		margin: 12px 0 0;
+	}
+}
+
+/*********************************
+/*  Section Tittle End
+*********************************/

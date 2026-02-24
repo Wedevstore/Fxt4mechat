@@ -1,0 +1,1 @@
+<td>{{ __($query->type) }}</td>

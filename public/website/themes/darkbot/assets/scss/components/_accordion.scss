@@ -1,0 +1,114 @@
+/*********************************
+/* Accordion Start
+*********************************/
+.accordion__wrapper {
+    max-width: 794px;
+    margin: auto;
+    .accordion__item {
+        border: 1px solid $border;
+        border-radius: 8px;
+        margin-bottom: 16px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        .accordion__header {
+            .accordion-button {
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+                font-weight: $medium;
+                color: $heading;
+                padding: 28px 24px;
+                padding-right: 50px;
+                background: transparent;
+
+                @include respond (phone) {
+                    font-size: 16px;
+                }
+                @include respond (phone-sm) {
+                    font-size: 15px;
+                    line-height: 20px;
+                    padding: 20px 16px;
+                    padding-bottom: 16px;
+                    padding-right: 50px;
+                }
+
+                &:focus {
+                    border: none;
+                    box-shadow: none;
+                }
+                &:not(.collapsed) {
+                    background: $bg;
+                    box-shadow: none;
+                    outline: none;
+                    color: $white;
+                    border-radius: 8px 8px 0 0;
+
+                    &::after {
+                        content: "\f068";
+                    }
+                }
+                &::after {
+                    background: none;
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: auto;
+                    width: auto;
+                    content: "\f067";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                }
+                // &.collapsed {
+                //     color: $heading;
+                //     .properties-item-v2 {
+                //         ul {
+                //             li,
+                //             p,
+                //             i {
+                //                 color: $heading;
+                //             }
+                //         }
+                //     }
+                // }
+            }
+        }
+        .accordion-body {
+            padding: 0 24px 20px;
+            background: $bg;
+            border-radius: 0 0 8px 8px;
+
+            @include respond (phone-sm) {
+                font-size: 15px;
+                line-height: 20px;
+                padding: 0 16px 20px;
+            }
+
+            .accordion__content {
+                p {
+                    font-family: $default;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.5px;
+                    color: $content;
+                    font-weight: $regular;
+                    margin-bottom: 0;
+
+                    @include respond (phone) {
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+                    @include respond (phone-sm) {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*********************************
+/* Accordion End
+*********************************/
